@@ -1,0 +1,31 @@
+#wrapper {
+    /* height and width for a 16x16 matrix */
+    height: 800px;
+    width: 800px;
+    
+    margin: 40px auto;
+}
+
+#wrapper div {
+    /* 800px/16x16matrix = 50px of height/width per div */
+    height: 50px; 
+    width: 50px;
+    
+    outline: 1px red solid;
+    float: left; /* I can use "display: inline-block;" here instead of float. See possibilities here: https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+    overflow: auto; /* this with "float:left;" will expand the parent instead of adding scrollbars if you do not give it explicit height. "overflow: hidden;" works as well. This solution works with IE6+ */
+    opacity: 0.05;
+    background-color: black;
+}
+
+#buttons {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#bt-change-matrix, #bt-change-size {
+    padding: 15px 15px;
+    margin: 0 5px;
+    background-color: aqua;
+    border-radius: 10px;
+}
